@@ -5,7 +5,6 @@ import {
 import * as hooks from './hooks';
 import { SettingsWidgetInternal as SettingsWidget } from '.';
 import { ProblemTypeKeys } from '../../../../../data/constants/problem';
-// import editorRender from '../../../../../modifiedEditorTestRender';
 
 jest.mock('./settingsComponents/GeneralFeedback', () => 'GeneralFeedback');
 jest.mock('./settingsComponents/GroupFeedback', () => 'GroupFeedback');
@@ -67,11 +66,6 @@ describe('SettingsWidget', () => {
     showAdvancedCards: jest.fn().mockName('showAdvancedSettingsCards.showAdvancedCards'),
     setResetTrue: jest.fn().mockName('showAdvancedSettingsCards.setResetTrue'),
   };
-  // const showAdvancedSettingsCardsBaseProps = {
-  //   isAdvancedCardsVisible: false,
-  //   showAdvancedCards: jest.fn(),
-  //   setResetTrue: jest.fn(),
-  // };
 
   const props = {
     problemType: ProblemTypeKeys.TEXTINPUT,

@@ -2,7 +2,6 @@ import React from 'react';
 import { screen, initializeMocks } from '@src/testUtils';
 import editorRender from '../../../../../modifiedEditorTestRender';
 import ExplanationWidget from './index';
-import { initializeStore } from '../../../../../data/redux';
 
 jest.mock('../../../../../sharedComponents/TinyMceWidget/hooks', () => ({
   ...jest.requireActual('../../../../../sharedComponents/TinyMceWidget/hooks'),
@@ -32,7 +31,6 @@ const initialState = {
 describe('SolutionWidget', () => {
   beforeEach(() => {
     initializeMocks({
-      initializeStore,
       initialState,
     });
   });

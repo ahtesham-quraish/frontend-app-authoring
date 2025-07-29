@@ -1,7 +1,6 @@
 import React from 'react';
 import { screen, initializeMocks } from '@src/testUtils';
 import editorRender from '../../../../../modifiedEditorTestRender';
-import { initializeStore } from '../../../../../data/redux';
 import QuestionWidget from '.';
 
 jest.mock('@src/editors/sharedComponents/TinyMceWidget/hooks', () => ({
@@ -28,7 +27,7 @@ const initialState = {
 
 describe('QuestionWidget', () => {
   beforeEach(() => {
-    initializeMocks({ initialState, initializeStore });
+    initializeMocks({ initialState });
   });
   describe('render', () => {
     beforeEach(() => {
